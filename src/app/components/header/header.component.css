@@ -1,0 +1,11 @@
+/* Ensures the cursor displays as a pointer on hover */
+nav a {
+    cursor: pointer;
+}
+
+@media (prefers-color-scheme: dark) {
+    .dark\:border-gray-600 {
+        --tw-border-opacity: 1;
+        border-color: rgb(17 24 39 / var(--tw-bg-opacity));
+    }
+}
