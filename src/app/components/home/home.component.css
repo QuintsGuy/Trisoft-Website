@@ -43,3 +43,110 @@
     background: linear-gradient(135deg, #009fff, #6a00ff);
     transform: scale(0.95);
 }
+
+/* Default card styles */
+.card {
+    background-color: var(--tw-bg-opacity, 1);
+    border: 1px solid var(--tw-border-opacity);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover effect for glossy shine and highlighted border */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+    border-color: rgba(30, 144, 255, 0.7); /* Light blue border when hovering */
+}
+
+/* Glossy animation effect */
+.card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    transform: rotate(45deg);
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+/* Hover shine effect */
+.card:hover::before {
+    opacity: 0.6;
+    animation: shine 1.2s ease-in-out infinite;
+}
+
+/* Keyframe for the shining effect */
+@keyframes shine {
+    0% {
+        left: -200%;
+    }
+    100% {
+        left: 200%;
+    }
+}
+
+/* Dark mode adjustment */
+.dark .card {
+    background-color: rgba(31, 41, 55, var(--tw-bg-opacity, 1));
+    border-color: rgba(75, 85, 99, 0.7);
+}
+
+.dark .card:hover {
+    border-color: rgba(30, 144, 255, 0.9);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1), 0 6px 6px rgba(255, 255, 255, 0.1);
+}
+
+.large-card {
+    background-color: var(--tw-bg-opacity, 1);
+    border: 1px solid var(--tw-border-opacity);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover effect for glossy shine and highlighted border */
+.large-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+    border-color: rgba(30, 144, 255, 0.7); /* Light blue border on hover */
+}
+
+/* Glossy animation effect with more right offset */
+.large-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: 30%; 
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    transform: rotate(45deg);
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+/* Hover shine effect */
+.large-card:hover::before {
+    opacity: 0.6;
+    animation: shine 2s ease-in-out infinite;
+}
+
+/* Dark mode adjustment */
+.dark .large-card {
+    background-color: rgba(31, 41, 55, var(--tw-bg-opacity, 1));
+    border-color: rgba(75, 85, 99, 0.7);
+}
+
+.dark .large-card:hover {
+    border-color: rgba(30, 144, 255, 0.9);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1), 0 6px 6px rgba(255, 255, 255, 0.1);
+}
