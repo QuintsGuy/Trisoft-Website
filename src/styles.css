@@ -1,48 +1,60 @@
 html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%; /* Ensure the body covers at least the full viewport height */
     background-color: #040724;
     color: #ffffff;
-    margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    padding-top: 50px;
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
+/* Remove extra padding or height that could cause overflow */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: hidden; /* Allows content to scroll properly if needed */
+}
+
+/* Background animation positioning */
 .background_animation {
+    overflow: hidden;
     width: 500px;
     height: 500px;
     border-radius: 50%;
     filter: blur(18rem);
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
 }
 
+/* Green background animation */
 .green {
-    position: absolute;
     top: -100px;
     left: -100px;
     background-color: #5ac14e;
+    overflow: hidden;
 }
 
+/* Purple background animation */
 .purple {
-    position: absolute;
     top: 800px;
     right: -100px;
     background-color: #8568D6;
+    overflow: hidden;
 }
 
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+/* Ensure footer is at the bottom */
+footer {
+    margin-top: auto;
 }
 
-.content {
-    flex: 1;
-}
-
+/* Custom dialog */
 .mdc-dialog--open .mat-mdc-dialog-surface, .mdc-dialog--closing .mat-mdc-dialog-surface {
     background-color: #374151;
 }
 
+/* Typography */
 .mat-headline-large, .mat-typography .mat-headline-large, .mat-typography h4 {
     margin: 0;
     letter-spacing: inherit;
@@ -50,10 +62,12 @@ html, body {
     font-size: x-large;
 }
 
+/* Custom backdrop class */
 .custom-backdrop-class {
     background: rgba(0, 0, 0, 0.4);
 }
 
+/* Responsive text color in dark mode */
 .active {
     @media (min-width: 768px) {
         @media (prefers-color-scheme: dark) {
@@ -63,4 +77,19 @@ html, body {
             }
         }
     }
+}
+
+/* Card section with proper z-index */
+.card-section {
+    position: relative;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.8); /* Example of transparency for the cards */
+}
+
+/* Ensure no extra space is added after the content */
+body::after {
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
 }
