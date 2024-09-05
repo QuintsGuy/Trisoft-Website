@@ -22,7 +22,6 @@ body {
     width: 500px;
     height: 500px;
     border-radius: 50%;
-    filter: blur(18rem);
     position: absolute;
     z-index: 0;
     pointer-events: none;
@@ -34,6 +33,7 @@ body {
     left: -100px;
     background-color: #5ac14e;
     overflow: hidden;
+    filter: blur(12rem);
 }
 
 /* Purple background animation */
@@ -42,6 +42,7 @@ body {
     right: -100px;
     background-color: #8568D6;
     overflow: hidden;
+    filter: blur(25rem);
 }
 
 /* Ensure footer is at the bottom */
