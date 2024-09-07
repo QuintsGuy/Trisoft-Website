@@ -85,10 +85,13 @@
 /* Keyframe for the shining effect */
 @keyframes shine {
     0% {
-        left: -200%;
+        left: -100%; /* Start position */
+    }
+    50% {
+        left: 100%;  /* Middle position */
     }
     100% {
-        left: 200%;
+        left: -100%; /* End at the same position as the start */
     }
 }
 
@@ -137,7 +140,8 @@
 /* Hover shine effect */
 .large-card:hover::before {
     opacity: 0.6;
-    animation: shine 2s ease-in-out infinite;
+    animation: shine 2s ease-in-out 1; /* Adjust to run twice */
+    animation-fill-mode: forwards; /* Ensures it ends in the starting position */
 }
 
 /* Dark mode adjustment */

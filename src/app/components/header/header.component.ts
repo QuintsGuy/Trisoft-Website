@@ -16,7 +16,7 @@ export class HeaderComponent {
   openDialog(): void {
     const dialogRef = this.dialog.open(HeaderDialogComponent, {
       width: '500px',
-      height: '620px',
+      height: '659px',
       disableClose: false,
       hasBackdrop: true,
       backdropClass: 'custom-backdrop-class',

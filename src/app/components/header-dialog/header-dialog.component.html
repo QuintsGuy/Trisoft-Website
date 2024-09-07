@@ -1,39 +1,38 @@
-<div class="p-4 md:p-5">
-    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+<div>
+    <div class="relative bg-white rounded-xl shadow-xl dark:bg-gray-800">
         <!-- Modal header -->
-        <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
-            <h4 class="text-xl font-semibold text-gray-900 dark:text-white">
+        <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t-lg dark:border-gray-600 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+            <h4 class="text-xl font-bold">
                 Let's Connect!
             </h4>
-            <button type="button" class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" (click)="onNoClick()">
-                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+            <button type="button" class="end-2.5 text-white bg-transparent hover:bg-gray-300 hover:text-gray-900 rounded-full text-sm w-8 h-8 ms-auto inline-flex justify-center items-center transition-all duration-200 ease-in-out dark:hover:bg-gray-600 dark:hover:text-white" (click)="onNoClick()">
+                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
                 </svg>
                 <span class="sr-only">Close modal</span>
             </button>
         </div>
         <!-- Modal body -->
-        <div class="p-4 md:p-5">
-            <form class="space-y-4" action="#">
+        <div class="p-6 md:p-7 bg-gradient-to-b from-white to-blue-50 dark:bg-gradient-to-b dark:from-gray-800 dark:to-gray-700 rounded-b-xl">
+            <form class="space-y-6" action="#">
                 <div>
-                    <label for="fullName" class="block mb-2 text-md font-medium text-gray-900 dark:text-white">Full name</label>
-                    <input type="fullName" name="fullName" id="fullName" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Enter Full Name" required />
+                    <label for="fullName" class="block mb-2 text-md font-medium text-gray-900 dark:text-white">Full Name</label>
+                    <input type="text" name="fullName" id="fullName" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-full focus:ring-purple-500 focus:border-purple-500 block w-full p-3 shadow-md dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Enter Full Name" required />
                 </div>
                 <div>
-                    <label for="email" class="block mb-2 text-md font-medium text-gray-900 dark:text-white">Your email</label>
-                    <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="name@company.com" required />
+                    <label for="email" class="block mb-2 text-md font-medium text-gray-900 dark:text-white">Your Email</label>
+                    <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-full focus:ring-purple-500 focus:border-purple-500 block w-full p-3 shadow-md dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="name@company.com" required />
                 </div>
                 <div>
-                    <label for="phone" class="block mb-2 text-md font-medium text-gray-900 dark:text-white">Your phone</label>
-                    <input type="phone" name="phone" id="phone" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="(123) 456-7890" required />
+                    <label for="phone" class="block mb-2 text-md font-medium text-gray-900 dark:text-white">Your Phone</label>
+                    <input type="phone" name="phone" id="phone" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-full focus:ring-purple-500 focus:border-purple-500 block w-full p-3 shadow-md dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="(123) 456-7890" required />
                 </div>
                 <div>
                     <label for="description" class="block mb-2 text-md font-medium text-gray-900 dark:text-white">Message</label>
-                    <textarea type="description" name="description" id="description" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="What are you looking to connect over?" style="height: 100px;" required></textarea>
+                    <textarea name="description" id="description" class="resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-3 shadow-md dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="What are you looking to connect over?" style="height: 120px;" required></textarea>
                 </div>
-                <button type="submit" class="glossy-button w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-lg px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit Contact Information</button>
+                <button type="submit" class="glossy-button w-full text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-lg px-6 py-3 shadow-lg transition-all duration-300 ease-in-out dark:focus:ring-blue-800">Submit Contact Information</button>
             </form>
         </div>
     </div>
 </div>
-
