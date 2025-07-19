@@ -54,7 +54,7 @@ nav a {
 }
 
 .navbar-link {
-    font-size: 1rem;
+    font-size: 18px;
     color: white; /* Default color */
     text-decoration: none;
     position: relative;
