@@ -6,7 +6,7 @@ import { HeaderDialogComponent } from '../header-dialog/header-dialog.component'
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive, MatDialogModule, HeaderDialogComponent],
+  imports: [RouterLink, RouterLinkActive, MatDialogModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
