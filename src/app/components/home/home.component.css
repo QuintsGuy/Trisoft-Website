@@ -53,44 +53,42 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     overflow: hidden;
+    z-index: 1;
 }
 
-/* Hover effect for highlighted border and slight shadow change */
-.card:hover {
-    transform: translateY(-5px); /* Less movement on hover */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 3px 5px rgba(0, 0, 0, 0.1);
-    border-color: rgba(30, 144, 255, 0.7); /* Light blue border on hover */
-}
 
-/* Simple fade-in background effect */
+/* Shimmer effect for service cards */
 .card::before {
     content: '';
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    left: -150%;
+    width: 200%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.3);
+    background: linear-gradient(120deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
     opacity: 0;
-    transition: opacity 0.3s ease;
     pointer-events: none;
+    z-index: 2;
+    transition: opacity 0.3s ease;
 }
 
-/* Fade-in effect on hover */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+    border-color: rgba(30, 144, 255, 0.7);
+}
+
 .card:hover::before {
-    opacity: 0.3; /* Simple fade-in effect */
+    opacity: 1;
+    animation: shimmer 1.2s linear forwards;
 }
 
-/* Keyframe for the shining effect */
-@keyframes shine {
+@keyframes shimmer {
     0% {
-        left: -100%; /* Start position */
-    }
-    50% {
-        left: 100%;  /* Middle position */
+        left: -150%;
     }
     100% {
-        left: -100%; /* End at the same position as the start */
+        left: 150%;
     }
 }
 
